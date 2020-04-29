@@ -8,3 +8,7 @@ def run_sql(sql, params)
   conn.close
   records
 end
+
+def logged_in?
+  !!session[:user_id]
+end

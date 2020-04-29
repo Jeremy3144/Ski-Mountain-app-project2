@@ -8,7 +8,8 @@ def create_user(email, password)
 end
 
 def find_one_user_by_id(id)
-  run_sql("SELECT * FROM users where id = #{id};")[0]
+  sql = "SELECT * FROM users where id = $1;"
+  run_sql(sql, [id])[0]
 end
 
 def find_one_user_by_email(email)

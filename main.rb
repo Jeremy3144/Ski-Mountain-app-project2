@@ -10,11 +10,12 @@ require_relative 'models/user'
 enable :sessions
 
 get '/' do
+  redirect "/login" unless logged_in?
   erb :index
 end
 
 get '/login' do
-  erb :login
+  erb(:login, layout: false)
 end
 
 post '/login' do
@@ -31,13 +32,49 @@ post '/login' do
 end
 
 get '/login/new' do
-  erb :new_login
+  erb(:new_login, layout: false)
 end
 
 post '/login/new' do
   create_user(params[:email], params[:password])
   redirect 'login'
 end
+
+get '/browse' do
+  mountains = get_all_mountains()
+  erb(:browse, locals: { mountains: mountains })
+end
+
+get '/mountain/:id' do
+  mountain = get_one_mountain_by_id(params[:id])
+  erb(:mountain, locals: {mountain: mountain})
+end
+
+get '/mountain/:id/edit' do
+  mountain = get_one_mountain_by_id(params[:id])
+  erb(:mountain_edit, locals: {mountain: mountain})
+end
+
+patch '/mountain/edit' do
+  update_mountain(
+    params[:id],
+    params[:name_of_mt],
+    params[:country],
+    params[:sum_of_mt],
+    params[:terrain_lvl],
+    params[:img_url],
+    params[:fav_run],
+    params[:rating]
+  )
+  redirect "/mountain/#{params[:id]}"
+end
+
+delete '/mountain' do
+  delete_mountain(params[:id])
+  redirect '/browse'
+end
+
+
 
 
 
