@@ -45,6 +45,24 @@ get '/browse' do
   erb(:browse, locals: { mountains: mountains })
 end
 
+get '/mountain/new' do
+  redirect "/login" unless logged_in?
+  erb(:mountain_new)
+end
+
+post '/mountain/new' do
+  create_mountain(
+    params[:name_of_mt],
+    params[:country],
+    params[:sum_of_mt],
+    params[:terrain_lvl],
+    params[:img_url],
+    params[:fav_run],
+    session[:user_id]
+  )
+  redirect "browse"
+end
+
 get '/mountain/:id' do
   mountain = get_one_mountain_by_id(params[:id])
   erb(:mountain, locals: {mountain: mountain})
@@ -64,7 +82,6 @@ patch '/mountain/edit' do
     params[:terrain_lvl],
     params[:img_url],
     params[:fav_run],
-    params[:rating]
   )
   redirect "/mountain/#{params[:id]}"
 end
@@ -72,6 +89,23 @@ end
 delete '/mountain' do
   delete_mountain(params[:id])
   redirect '/browse'
+end
+
+post '/mountain/vote' do
+  if params[:vote] == "up"
+    add_vote(
+      session[:user_id],
+      params[:id],
+      "up"
+    )
+  else 
+    add_vote(
+      session[:user_id],
+      params[:id],
+      "down"
+    )
+  end
+  redirect "/mountain/#{params[:id]}"
 end
 
 

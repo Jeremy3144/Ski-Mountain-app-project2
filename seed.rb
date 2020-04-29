@@ -11,7 +11,7 @@ require_relative 'models/mountain'
 
 5.times do |n|
   create_mountain(
-    "hak#{n}", "jap#{n}", "awdawdawdawd#{n}", "beg#{n}", "cat#{n}", "favR#{n}", 1, 0
+    "hak#{n}", "jap#{n}", "awdawdawdawd#{n}", "beg#{n}", "cat#{n}", "favR#{n}", 1
   )
 end
 

@@ -1,7 +1,6 @@
 <form action="/mountain/edit" method="post">
   <input type="hidden" name="_method" value="patch">
   <input type="hidden" name="id" value="<%= mountain["id"]%>">
-  <input type="hidden" name="rating" value="<%= mountain["rating"]%>">
   <input type="hidden" name="user_id" value="<%= mountain["user_id"]%>">
   <label for="">Name of mountain</label>
   <input type="text" name="name_of_mt" value="<%= mountain["name_of_mt"]%>">

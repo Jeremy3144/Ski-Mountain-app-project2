@@ -1,0 +1,16 @@
+<form action="/mountain/new" method="post">
+  <input type="hidden" name="user_id" value="<%= session["user_id"]%>">
+  <label for="">Name of mountain</label>
+  <input type="text" name="name_of_mt">
+  <label for="">Country</label>
+  <input type="text" name="country">
+  <label for="">Description of mountain</label>
+  <input type="text" name="sum_of_mt">
+  <label for="">Terrain level</label>
+  <input type="text" name="terrain_lvl">
+  <label for="">Image url of the mountain</label>
+  <input type="text" name="img_url">
+  <label for="">Favourite run</label>
+  <input type="text" name="fav_run">
+  <button>Create</button>
+</form>
