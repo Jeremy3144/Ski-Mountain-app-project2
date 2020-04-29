@@ -3,11 +3,8 @@ require 'pg'
 
 require_relative 'lib'
 require_relative 'models/mountain'
+require_relative 'models/votes'
+require_relative 'models/user'
 
-
-test = get_all_mountains()
-
-test.each do |mt|
-  puts mt["name_of_mt"]
-end
 binding.pry
+

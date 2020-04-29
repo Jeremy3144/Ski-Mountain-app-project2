@@ -6,6 +6,7 @@ require 'pry'
 require_relative 'lib'
 require_relative 'models/mountain'
 require_relative 'models/user'
+require_relative 'models/votes'
 
 enable :sessions
 
@@ -92,6 +93,9 @@ delete '/mountain' do
 end
 
 post '/mountain/vote' do
+  if user_voted?(session[:user_id],params[:id])
+    redirect "mountain/#{params[:id]}"
+  end
   if params[:vote] == "up"
     add_vote(
       session[:user_id],
