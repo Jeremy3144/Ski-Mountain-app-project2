@@ -9,7 +9,12 @@
 </head>
 <body>
   <div class="main-container">
-    <a href="/login">Login/Out</a>
+   <% if logged_in? %>
+    <form action="/logout" method="post">
+    <input type="hidden" name="_method" value="delete" >
+    <button class="logout-btn">logout</button>
+  </form>
+  <% end %>
     <h1 class="layout-h1">Ski Mountains</h1>
     <nav class="layout-nav">
       <a href="/">Home</a>

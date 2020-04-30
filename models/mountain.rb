@@ -28,3 +28,8 @@ def delete_mountain(id)
   sql = "delete from mountains where id = $1;"
   run_sql(sql, [id])
 end
+
+def get_all_by_id_posted_last()
+  sql = "select * from mountains order by id DESC;"
+  run_sql(sql)
+end

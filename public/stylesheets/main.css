@@ -5,7 +5,7 @@
 
 body {
   background-image: url(images/MT-BG-1920x960.jpg);
-  /* background: 100%; */
+  background-size: cover;
 }
 
 
@@ -190,18 +190,68 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 
+.mt-main-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: .1rem;
+  width: 65%;
+  margin: 1% auto auto auto;
+}
 
 .mountain-view {
   border: .2rem solid black;
-  width: 65%;
-  margin: 2% auto auto auto;
+  /* width: 65%; */
+  /* margin: 2% auto auto auto; */
   text-align: center;
+  min-height: 700px;
 }
 
+.vote-btn-form {
+  float: left;
+  margin: 0;
+}
 
+.edit-mt-btn {
+  float: right;
+}
 
+.mountain-view h2 {
+  margin-top: 2%;
+  font-size: 4rem;
+  text-decoration: underline double rgba(255, 0, 0, 0.488);
+}
 
+.mt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
+.mt-sum {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+.mountain-view h3 {
+  font-size: 2rem;
+}
+
+.comments-view {
+  border: .2rem solid black;
+  /* margin-top: 2%; */
+  min-height: 80%;
+
+}
+
+.logout-btn {
+  text-align: right;
+}
+
+.yt-vid {
+  margin: 5% auto;
+  display: flex;
+}
 
 /* credit to https://github.com/pajasevi/CSSnowflakes */
 

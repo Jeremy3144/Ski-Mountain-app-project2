@@ -1,19 +1,38 @@
-<main class="mountain-view">
-  <form action="/mountain/vote" method="post">
-    <input type="hidden" name="vote" value="up">
-    <input type="hidden" name="id" value="<%= mountain["id"]%>">
-    <button>Upvote</button>
-  </form>
-  <form action="/mountain/vote" method="post">
-    <input type="hidden" name="id" value="<%= mountain["id"]%>">
-    <button>Downvote</button>
-  </form>
-  <h2><%= get_result_of_votes_by_post_id(mountain["id"])%></h2>
-  <a href="/mountain/<%= mountain["id"] %>/edit">Edit</a>
-  <h2><%= mountain["name_of_mt"] %></h2>
-  <h3><%= mountain["rating"] %></h3>
-  <h3><%= mountain["country"] %></h3>
-  <p><%= mountain["sum_of_mt"] %></p>
-  <h3><%= mountain["terrain_lvl"] %></h3>
-  <h3><%= mountain["fav_run"] %></h3>
-</main>
+<div class="mt-main-wrapper">
+  <main class="mountain-view">
+    
+    <div>
+      <form class="vote-btn-form" action="/mountain/vote" method="post">
+        <input type="hidden" name="id" value="<%= mountain["id"]%>">
+        <button>Downvote</button>
+      </form>
+
+      <form class="vote-btn-form" action="/mountain/vote" method="post">
+        <input type="hidden" name="vote" value="up">
+        <input type="hidden" name="id" value="<%= mountain["id"]%>">
+        <button>Upvote</button>
+      </form>
+      <%if session[:user_id] == mountain["user_id"]%>
+      <a class="edit-mt-btn" href="/mountain/<%= mountain["id"] %>/edit">Edit</a>
+      <% end %>
+    
+    </div>
+
+    <h2><%= mountain["name_of_mt"] %></h2>
+
+    <div class="mt-grid">
+      <h3 class="vote-display">Mountain rating: <%= get_result_of_votes_by_post_id(mountain["id"])%></h2>
+      <h3><%= mountain["country"] %></h3>
+    </div>
+
+    <p class="mt-sum"><%= mountain["sum_of_mt"] %></p>
+
+    <div class="mt-grid">
+      <h3><%= mountain["terrain_lvl"] %></h3>
+      <h3><%= mountain["fav_run"] %></h3>
+    </div>
+  </main>
+  <aside>
+    <div class="comments-view"></div>
+  </aside>
+</div>

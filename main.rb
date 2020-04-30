@@ -41,8 +41,18 @@ post '/login/new' do
   redirect 'login'
 end
 
+delete '/logout' do
+  session[:user_id] = nil
+  redirect '/login'
+end
+
 get '/browse' do
   mountains = get_all_mountains()
+  erb(:browse, locals: { mountains: mountains })
+end
+
+get '/browse/recent' do
+  mountains = get_all_by_id_posted_last()
   erb(:browse, locals: { mountains: mountains })
 end
 
@@ -112,6 +122,9 @@ post '/mountain/vote' do
   redirect "/mountain/#{params[:id]}"
 end
 
+get '/:no_page' do
+  redirect "/"
+end
 
 
 

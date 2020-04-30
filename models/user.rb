@@ -21,3 +21,7 @@ def find_one_user_by_email(email)
     return records[0]
   end
 end
+
+def current_user
+  find_one_user_by_id(session[:user_id])
+end
