@@ -1,15 +1,32 @@
-<form action="/mountain/new" method="post">
-  <label for="">Name of mountain</label>
-  <input type="text" name="name_of_mt">
-  <label for="">Country</label>
-  <input type="text" name="country">
-  <label for="">Description of mountain</label>
-  <input type="text" name="sum_of_mt">
-  <label for="">Terrain level</label>
-  <input type="text" name="terrain_lvl">
-  <label for="">Image url of the mountain</label>
-  <input type="text" name="img_url">
-  <label for="">Favourite run</label>
-  <input type="text" name="fav_run">
-  <button>Create</button>
-</form>
+<div class="mountain-form">
+  <h2>New mountain</h2>
+  <form action="/mountain/new" method="post">
+    <div class="top-wrapper">
+      <div>
+        <label for="">Name of mountain</label>
+        <input type="text" name="name_of_mt">
+      </div>
+      <div>
+        <label for="">Country</label>
+        <input type="text" name="country">
+      </div>
+    </div>
+    <label for="">Description of mountain</label>
+    <textarea class="sum-of-mt-input" name="sum_of_mt" cols="40" rows="5"></textarea>
+    <div class="bottom-wrapper">
+      <div>
+        <label for="">Terrain level</label>
+        <input type="text" name="terrain_lvl">
+      </div>
+      <div>
+        <label for="">Image url of the mountain</label>
+        <input type="text" name="img_url">
+      </div>
+      <div>
+        <label for="">Favourite run</label>
+        <input type="text" name="fav_run">
+      </div>
+    </div>
+    <button>Create</button>
+  </form>
+</div>

@@ -16,13 +16,15 @@ body {
   border: .3rem solid black;
   margin: 8% auto;
   width: 22%;
-  height: 500px;
+  height: 600px;
 }
 
 .login-box h2 {
   text-align: center;
-  padding-top: .5rem;
-  padding-bottom: 3rem;
+  padding-top: 2%;
+  padding-bottom: 15%;
+  font-size: 5rem;
+  margin: 0;
 }
 
 .login-form input {
@@ -31,6 +33,7 @@ body {
   margin-bottom: 2rem;
   width: 16rem;
   height: 3rem;
+  font-size: 1rem;
 }
 
 .login-box button {
@@ -81,7 +84,7 @@ body {
   color: black;
 }
 
-.layout-nav a:hover {
+.layout-nav a:hover , button:hover {
   color: rgba(255, 255, 0, 0.611);
 }
 
@@ -113,6 +116,87 @@ body {
 
 
 
+/* mountain_new */
+
+.mountain-form {
+  border: .2rem solid black;
+  width: 65%;
+  margin: 2% auto auto auto;
+  text-align: center;
+}
+
+.mountain-form h2 {
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+  text-decoration: underline;
+}
+
+.mountain-form label {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.mountain-form input {
+  width: 16rem;
+  height: 3rem;
+  font-size: 1rem;
+  text-align: center;
+  background-color: #00a3e163;
+  border: #00a1e1fc;
+  font-size: 1.5rem;
+}
+
+.top-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+}
+
+.top-wrapper div {
+  text-align: center;
+  margin-bottom:  1rem;
+}
+
+.bottom-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom:  1rem;
+}
+
+.sum-of-mt-input {
+  height: 15rem;
+  width: 40rem;
+  background-color: #00a3e163;
+  border: #00a1e1fc;
+  margin-bottom:  1rem;
+  font-size: 1.5rem;
+}
+
+.mountain-form button {
+  height: 3rem;
+  width: 10rem;
+  background-color: lightcyan;
+  border-radius: .5rem;
+  box-shadow: inset 0 0 .5rem #0ff;
+  font-size: 1rem;
+  margin: 2rem auto;
+}
+
+
+.edit-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.mountain-view {
+  border: .2rem solid black;
+  width: 65%;
+  margin: 2% auto auto auto;
+  text-align: center;
+}
 
 
 

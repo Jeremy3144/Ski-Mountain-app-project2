@@ -1,24 +1,43 @@
-<form action="/mountain/edit" method="post">
-  <input type="hidden" name="_method" value="patch">
-  <input type="hidden" name="id" value="<%= mountain["id"]%>">
-  <input type="hidden" name="user_id" value="<%= mountain["user_id"]%>">
-  <label for="">Name of mountain</label>
-  <input type="text" name="name_of_mt" value="<%= mountain["name_of_mt"]%>">
-  <label for="">Country</label>
-  <input type="text" name="country" value="<%= mountain["country"]%>">
-  <label for="">Description of mountain</label>
-  <input type="text" name="sum_of_mt" value="<%= mountain["sum_of_mt"]%>">
-  <label for="">Terrain level</label>
-  <input type="text" name="terrain_lvl" value="<%= mountain["terrain_lvl"]%>">
-  <label for="">Image url of the mountain</label>
-  <input type="text" name="img_url" value="<%= mountain["img_url"]%>">
-  <label for="">Favourite run</label>
-  <input type="text" name="fav_run" value="<%= mountain["fav_run"]%>">
-  <button>Update</button>
-</form>
+<div class="mountain-form">
+  <h2>Edit <%= mountain["name_of_mt"]%></h2>
+  <form action="/mountain/edit" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <input type="hidden" name="id" value="<%= mountain["id"]%>">
+    <input type="hidden" name="user_id" value="<%= mountain["user_id"]%>">
+    <div class="top-wrapper">
+      <div>
+        <label for="">Name of mountain</label>
+        <input type="text" name="name_of_mt" value="<%= mountain["name_of_mt"]%>">
+      </div>
+      <div>
+        <label for="">Country</label>
+        <input type="text" name="country" value="<%= mountain["country"]%>">
+      </div>
+    </div>
+    <label for="">Description of mountain</label>
+    <textarea class="sum-of-mt-input" name="sum_of_mt" cols="40" rows="5"><%= mountain["sum_of_mt"]%></textarea>
+    <div class="bottom-wrapper">
+      <div>
+        <label for="">Terrain level</label>
+        <input type="text" name="terrain_lvl" value="<%= mountain["terrain_lvl"]%>">
+      </div>
+      <div>
+        <label for="">Image url of the mountain</label>
+        <input type="text" name="img_url" value="<%= mountain["img_url"]%>">
+      </div>
+      <div>
+        <label for="">Favourite run</label>
+        <input type="text" name="fav_run" value="<%= mountain["fav_run"]%>">
+      </div>
+    </div>
+    <div class="edit-btns">
+      <button>Update</button>
+  </form>
 
-<form action="/mountain" method="post">
-  <input type="hidden" name="id" value="<%= mountain["id"] %>">
-  <input type="hidden" name="_method" value="delete">
-  <button>delete</button>
-</form>
+      <form action="/mountain" method="post">
+      <input type="hidden" name="id" value="<%= mountain["id"] %>">
+      <input type="hidden" name="_method" value="delete">
+      <button>delete</button>
+    </form>
+  </div>
+</div>
