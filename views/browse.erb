@@ -1,5 +1,11 @@
-
-<% mountains.each do |mt| %>
-<p><a href="/mountain/<%= mt["id"] %>"><%= mt["name_of_mt"] %></a></p>
-<% end %>
+<div class="browse-wrapper">
+  <% mountains.each do |mt| %>
+  <div>
+  <span><%= mt["name_of_mt"] %></span>
+  <a class="browse-a" href="/mountain/<%= mt["id"] %>">
+    <img class="browse-img" src="<%= mt["img_url"] %>" alt="">
+  </a>
+  </div>
+  <% end %>
+</div>
 

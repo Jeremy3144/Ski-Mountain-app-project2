@@ -9,9 +9,9 @@ require_relative 'models/mountain'
 
 
 
-5.times do |n|
+20.times do |n|
   create_mountain(
-    "hak#{n}", "jap#{n}", "awdawdawdawd#{n}", "beg#{n}", "cat#{n}", "favR#{n}", 1
+    "hak#{n}", "jap#{n}", "awdawdawdawd#{n}", "beg#{n}", "https://www.powderhounds.com/site/DefaultSite/filesystem/images/Japan/HakubaHappo/Overview/01.jpg", "favR#{n}", 1
   )
 end
 

@@ -90,6 +90,26 @@ body {
   margin-top: 0;
 }
 
+.browse-a {
+  display: block;
+  text-align: center;
+  justify-content: center;
+}
+
+.browse-img {
+  height: 100px;
+  width: 100px;
+}
+
+.browse-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(4,1fr);
+  grid-gap: 1rem;
+  width: 65%;
+  margin: auto;
+  margin-top: 5rem;
+}
 
 
 
@@ -99,9 +119,7 @@ body {
 
 
 
-
-
-
+/* credit to https://github.com/pajasevi/CSSnowflakes */
 
 
 .snowflake {

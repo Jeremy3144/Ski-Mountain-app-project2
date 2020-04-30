@@ -1,7 +1,7 @@
 require 'sinatra'
-require 'sinatra/reloader' 
+require 'sinatra/reloader' if development?
 require 'pg' 
-require 'pry'
+require 'pry' if development?
 
 require_relative 'lib'
 require_relative 'models/mountain'
