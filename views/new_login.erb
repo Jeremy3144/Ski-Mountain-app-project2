@@ -1,7 +1,20 @@
-<form action="/login/new" method="post">
-  <label for="">Email</label>
-  <input type="text" name="email">
-  <label for="">Password</label>
-  <input type="password" name="password">
-  <button>Log in</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <nav class="login-box">
+    <h2>New user</h2>
+    <form class="login-form" action="/login/new" method="post">
+      <input placeholder="Email" type="text" name="email">
+      <input placeholder="Password" type="password" name="password">
+      <button>Create user</button>
+    </form>
+</nav>
+</body>
+</html>

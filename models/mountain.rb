@@ -2,7 +2,7 @@
 
 def get_all_mountains()
   sql = "select * from mountains;"
-  run_sql(sql, [])
+  run_sql(sql)
 end
 
 def get_one_mountain_by_id(id)

@@ -8,6 +8,7 @@
     <input type="hidden" name="id" value="<%= mountain["id"]%>">
     <button>Downvote</button>
   </form>
+  <h2><%= get_result_of_votes_by_post_id(mountain["id"])%></h2>
   <a href="/mountain/<%= mountain["id"] %>/edit">Edit</a>
   <h2><%= mountain["name_of_mt"] %></h2>
   <h3><%= mountain["rating"] %></h3>

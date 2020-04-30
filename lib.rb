@@ -1,8 +1,5 @@
 
-
-
-
-def run_sql(sql, params)
+def run_sql(sql, params = [ ])
   conn = PG.connect(dbname: 'skimountains')
   records = conn.exec_params(sql, params)
   conn.close

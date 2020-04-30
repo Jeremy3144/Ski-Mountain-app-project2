@@ -1,22 +1,57 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <title>Ski Mountains</title>
   <link rel='stylesheet' href='/stylesheets/main.css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <a href="/login">Login/Out</a>
-  <h1>Ski Mountains</h1>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/browse">Browse</a>
-    <a href="/browse/recent">Recent posts</a>
-    <a href="/mountain/new">Make a post</a>
-    <a href="">Profile</a>
-  </nav>
-  <%= yield %>
+  <div class="main-container">
+    <a href="/login">Login/Out</a>
+    <h1 class="layout-h1">Ski Mountains</h1>
+    <nav class="layout-nav">
+      <a href="/">Home</a>
+      <a href="/browse">Browse</a>
+      <a href="/browse/recent">Recent posts</a>
+      <a href="/mountain/new">Make a post</a>
+      <a href="">Profile</a>
+    </nav>
+  </div>
 
+  <div class="snowflakes" aria-hidden="true">
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+    ❅
+  </div>
+  <div class="snowflake">
+    ❆
+  </div>
+  <div class="snowflake">
+    ❄
+  </div>
+  <div class="snowflake">
+    ❅
+  </div>
+  <div class="snowflake">
+    ❆
+  </div>
+  <div class="snowflake">
+    ❄
+  </div>
+  <div class="snowflake">
+    ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+</div>
+  <%= yield %>
 </body>
 </html>
