@@ -1,7 +1,7 @@
 <div class="browse-wrapper">
   <% mountains.each do |mt| %>
   <div>
-  <span><%= mt["name_of_mt"] %></span>
+  <label class="browse-l" for=""><%= mt["name_of_mt"] %></label>
   <a class="browse-a" href="/mountain/<%= mt["id"] %>">
     <img class="browse-img" src="<%= mt["img_url"] %>" alt="">
   </a>

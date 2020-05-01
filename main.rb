@@ -7,6 +7,8 @@ require_relative 'lib'
 require_relative 'models/mountain'
 require_relative 'models/user'
 require_relative 'models/votes'
+require_relative 'models/comments'
+
 
 enable :sessions
 
@@ -76,7 +78,11 @@ end
 
 get '/mountain/:id' do
   mountain = get_one_mountain_by_id(params[:id])
-  erb(:mountain, locals: {mountain: mountain})
+  comments = get_comments_by_post_id(params[:id])
+  erb(:mountain, locals: {
+    mountain: mountain,
+    comments: comments
+  })
 end
 
 get '/mountain/:id/edit' do
@@ -124,6 +130,11 @@ end
 
 get '/:no_page' do
   redirect "/"
+end
+
+post '/mountain/comment' do
+  add_comment(params[:user_id], params[:post_id], params[:comment])
+  redirect "/mountain/#{params[:post_id]}"
 end
 
 

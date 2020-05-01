@@ -21,3 +21,10 @@ create table votes (
   post_id integer,
   vote_type text
 );
+
+create table comments (
+  id serial primary key,
+  user_id integer,
+  post_id integer,
+  comment text
+);
