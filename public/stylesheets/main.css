@@ -18,6 +18,7 @@ body {
   margin: 8% auto;
   width: 22%;
   height: 600px;
+  border-radius: 1rem;
 }
 
 .login-box h2 {
@@ -35,6 +36,11 @@ body {
   width: 16rem;
   height: 3rem;
   font-size: 1rem;
+  background-color: #00a3e163;
+  border: #00a3e163;
+  text-align: center;
+  color: black;
+  font-size: 2rem;
 }
 
 .login-box button {
@@ -46,7 +52,9 @@ body {
   background-color: lightcyan;
   border-radius: .5rem;
   box-shadow: inset 0 0 .5rem #0ff;
-
+  text-align: center;
+  justify-content: center;
+  font-size: 2rem;
 }
 
 .login-box a {
@@ -55,9 +63,13 @@ body {
   margin-top: 1rem;
   display: flex;
   width: 10rem;
-  background-color: black;
   padding: 1rem;
+  background-color: lightcyan;
   border-radius: .5rem;
+  box-shadow: inset 0 0 .5rem #0ff;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
 }
 
 /* ^^ Login pages ^^ */
@@ -85,7 +97,7 @@ body {
   color: black;
 }
 
-.layout-nav a:hover , button:hover {
+.layout-nav a:hover , button:hover, .login-box a:hover {
   color: rgba(255, 255, 0, 0.611);
 }
 
@@ -175,15 +187,22 @@ body {
   font-size: 1.5rem;
 }
 
+.delete-post-btn {
+  background-color: rgba(208, 13, 13, 0.515);
+}
+
 .mountain-form button {
   height: 3rem;
   width: 10rem;
-  background-color: #1eb56272;
   border-radius: .5rem;
   box-shadow: inset 0 0 .5rem #00a3e163;
   font-size: 1rem;
   margin: 2rem auto;
   border: #00a3e163;
+}
+
+.update-post-btn {
+  background-color: #1eb56272;
 }
 
 
@@ -256,6 +275,9 @@ body {
 
 .logout-btn {
   text-align: right;
+  float: right;
+  background-color: #00a3e163;
+  border: #00a1e1fc;
 }
 
 .yt-vid {
