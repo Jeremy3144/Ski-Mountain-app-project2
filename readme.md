@@ -2,7 +2,7 @@
 A place to post cool ski mountains<br/>
 You will need to make an user and log in<br/>
 From there you can browse the mountains posted, make a new one and comment on mountains<br/>
-<a href="https://jeremy3144.github.io/Tic-Tac-Toe-Project1"/> Play Me </a>
+<a href="https://fast-ocean-58805.herokuapp.com/"/> Go to website </a>
 
 ## Development 
 - Ruby
